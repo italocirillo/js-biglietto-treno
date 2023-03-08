@@ -30,4 +30,5 @@ if(età>=65){
 }
 
 // OUTPUT
-console.log("Il prezzo finale del biglietto è: "+prezzoBiglietto);
+console.log("Il prezzo finale del biglietto è: ");
+console.log(prezzoBiglietto.toFixed(2));
