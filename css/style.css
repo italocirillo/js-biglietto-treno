@@ -1,0 +1,48 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    color: whitesmoke;
+}
+.wrapper{
+    height: 100vh;
+    width: 100%;
+    background-image: url(../img/cover-treno.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sfocatura{
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    fill-opacity: 100%;
+    text-align: center;
+}
+h1{
+    text-transform: uppercase;
+    font-family: 'Tilt Prism', cursive;
+    color: goldenrod;
+    text-align: center;
+}
+.testo-informativo{
+    text-align: start;
+    display: inline-block;
+    margin: 0 auto;
+    background-image: url(../img/coverbiglietto.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 2px solid black;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 1em;
+}
+.testo-informativo p{
+    padding: 0.5em 0em;
+}
+.riquadro{
+    border: 1px solid white;
+    padding: 0.2em 1em;
+}

@@ -25,18 +25,34 @@ let soldiDaScontare=0;
 // LOGICA
 // Calcolo il prezzo pieno in base ai km
 prezzoBiglietto=prezzoKm*distanza;
+console.log("Il prezzo del biglietto è")
 console.log(prezzoBiglietto);
 // Verifico se l'utente è idoneo ad avere uno sconto e nel caso calcolo quindi l'eventuale sconto
 if(età>=65){
     soldiDaScontare=prezzoBiglietto*scontoAnziani;
+    console.log("Soldi da scontare:");
     console.log(soldiDaScontare);
+    document.getElementById("prezzo-da-scontare").innerHTML=soldiDaScontare.toFixed(2);
+    document.getElementById("sconto-da-applicare").innerHTML="40%";
+    document.getElementById("prezzo-non-scontato").innerHTML=prezzoBiglietto.toFixed(2);
     prezzoBiglietto=prezzoBiglietto-soldiDaScontare;
 }else if(età<18){
     soldiDaScontare=prezzoBiglietto*scontoMinorenni;
+    console.log("Soldi da scontare:");
     console.log(soldiDaScontare);
+    document.getElementById("prezzo-da-scontare").innerHTML=soldiDaScontare.toFixed(2);
+    document.getElementById("sconto-da-applicare").innerHTML="20%";
+    document.getElementById("prezzo-non-scontato").innerHTML=prezzoBiglietto.toFixed(2);
     prezzoBiglietto=prezzoBiglietto-soldiDaScontare;
+}else{
+    document.getElementById("prezzo-da-scontare").innerHTML="NIENTE";
+    document.getElementById("sconto-da-applicare").innerHTML="NO";
+    document.getElementById("prezzo-non-scontato").innerHTML=prezzoBiglietto;
 }
 
 // OUTPUT
 console.log("Il prezzo finale del biglietto è: ");
 console.log(prezzoBiglietto.toFixed(2));
+document.getElementById("età").innerHTML=età;
+document.getElementById("distanza").innerHTML=distanza;
+document.getElementById("prezzo-finale").innerHTML=prezzoBiglietto.toFixed(2);
